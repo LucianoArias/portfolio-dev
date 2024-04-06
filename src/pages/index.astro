@@ -1,0 +1,38 @@
+---
+import Hero from '../components/Hero.astro'
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import CodeIcon from '../components/icons/Code.astro'
+import Proyects from '../components/Projects.astro'
+import ProfileCheck from '../components/icons/ProfileCheck.astro';
+import AboutMe from '../components/AboutMe.astro'
+---
+
+<Layout title="Portfolio de Luciano - Desarrollador y Programador Web" description="Luciano Arias desarrollador de software con mas de un año de experiencia, especializado en realizar aplicaciones unicas.">
+	<main class="px-4">
+		<SectionContainer id="home" class="py-16 md:py-36">
+			<Hero>
+				<slot />
+			</Hero>
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7" />
+				Proyectos
+			</h2>
+			<Proyects />
+		</SectionContainer>
+		
+		<SectionContainer id="about-me" class="py-16 md:py-36">
+			<h2
+			  class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+			>
+			  <ProfileCheck class="size-8" />
+			  Sobre mí
+			</h2>
+			<AboutMe />
+		  </SectionContainer>
+	</main>
+</Layout>
+	
