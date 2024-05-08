@@ -5,6 +5,8 @@ import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import React from "./icons/React.astro"
+import PostgreSQL from './icons/PostgreSQL.astro'
+import Prisma from './icons/Prisma.astro'
 
 const TAGS = {
   NEXT: {
@@ -17,13 +19,32 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
-  REACT:{
+  REACT: {
     name: "React",
     class: "bg-[#003159] text-white",
     icon: React
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#386c8c] text-white",
+    icon: PostgreSQL
+  },
+  PRISMA: {
+    name: 'Prisma',
+    class: 'bg-[#080b14] text-white',
+    icon: Prisma
   }
 }
 const PROJECTS = [
+  {
+    title: "Fake Trello",
+    description:
+      "Inspirada en 'Trello', Fake Trello es una aplicación web de gestión de tareas totalmente funcional. La aplicación admite tableros de tareas personales, lo que permite realizar tareas sencillas y organizadas.",
+    link: "https://fake-trello-alpha.vercel.app/",
+    github: "https://github.com/LucianoArias/fake-trello",
+    image: "images/projects/fake-trello.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.POSTGRESQL, TAGS.PRISMA],
+  },
   {
     title: "Weather App",
     description:
@@ -47,7 +68,7 @@ const PROJECTS = [
     description: "Aplicación web que permite a los usuarios buscar y descubrir información sobre películas",
     link: "https://search-movie-app-delta.vercel.app/",
     github: "https://github.com/LucianoArias/search-movie-app",
-    image: "images/projects/search.webp",
+    image: "images/projects/search-movie.webp",
     tags: [TAGS.REACT],
   }
 ]
